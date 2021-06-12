@@ -1,17 +1,121 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+class CheckersSquare extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    render() {
+        return(
+            <div className={"square " + this.props.color}></div>
+        );
+    }
+}
+
+class CheckersBoard extends React.Component {
+
+    render() {
+        return (
+        <div>
+            <div className="board-row">
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+            </div>
+            <div className="board-row">
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+            </div>
+            <div className="board-row">
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+            </div>
+            <div className="board-row">
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+            </div>
+            <div className="board-row">
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+            </div>
+            <div className="board-row">
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+            </div>
+            <div className="board-row">
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+            </div>
+            <div className="board-row">
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+                <CheckersSquare color="white-square"/>
+                <CheckersSquare color="black-square"/>
+            </div>
+        </div>
+        );
+    }
+}
+
+class CheckersApp extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render(){
+        return (
+            <div>
+                <CheckersBoard />
+            </div>
+        );
+    }
+}
+
+ReactDOM.render( <CheckersApp/>, document.getElementById("root"))
